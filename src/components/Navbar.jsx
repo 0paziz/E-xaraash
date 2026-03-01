@@ -12,24 +12,34 @@ export default function Navbar() {
               <h2 className="font-bold text-2xl text-pink-700">E-xaraash</h2>
             </Link>
           </div>
-          <nav className="gap-x-4 flex items-center ">
+          <nav className="gap-x-10 flex items-center font-semibold ">
             <Link className="hover:text-gray-400" to="/">
               Home
+            </Link>
+             <Link className="hover:text-gray-400" to="/contact">
+              Contact
             </Link>
             <Link className="hover:text-gray-400" to="/about">
               About
             </Link>
-            <Link className="hover:text-gray-400" to="/products">
-              Products
+            <Link className="hover:text-gray-400" to="/signup">
+              Sign Up
             </Link>
           </nav>
-          <div className="flex gap-x-4">
+          <div className="flex gap-x-4 items-center">
+
+            <form className="flex items-center bg-gray-100 p-2 rounded gap-1">
+              <input type="text" name="text" placeholder="what are you looking for?" className="outline-0 text-[14px] px-2" />
+              <img src="/search.png" width="25" alt="search icon" className="pr-2 cursor-pointer" />
+            </form>
+
             <Link to="/cart">
-              <ShoppingCart fill="green" color="green" />
+              <ShoppingCart  />
             </Link>
             <Link to="fav">
-              <HeartIcon fill="red" color="red" />
+              <HeartIcon  />
             </Link>
+
           </div>
         </div>
       </header>
